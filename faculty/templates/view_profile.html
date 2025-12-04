@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<center>
+    <h1>--- Profile ---</h1>
+
+    <div class="card" style="width: 18rem;">
+        <img src="{% static faculty.img %}" class="card-img-top" alt="{{ faculty.name }}">
+
+
+
+        <div class="card-body">
+            <h5 class="card-title">{{ faculty.name }}</h5>
+
+            <p class="card-text"><strong>Department:</strong> {{ faculty.dept }}</p>
+            <p class="card-text"><strong>Email:</strong> {{ faculty.email }}</p>
+            <p class="card-text"><strong>Designation:</strong> {{ faculty.designation }}</p>
+            <p class="card-text"><strong>Qualifications:</strong> {{ faculty.qualifications }}</p>
+            <p class="card-text"><strong>Specialization:</strong> {{ faculty.specialization }}</p>
+            <p class="card-text"><strong>Contact:</strong> {{ faculty.contact_no }}</p>
+            <p class="card-text"><strong>Experience:</strong> {{ faculty.experience }}</p>
+
+            <a href="/" class="btn btn-primary">Home</a>
+        </div>
+    </div>
+</center>
+</body>
+</html>
